@@ -1,0 +1,8 @@
+root.x86_64/sys
+root.x86_64/etc/hosts
+root.x86_64/etc/resolv.conf
+root.x86_64/usr/share/man
+./sys
+./etc/hosts
+./etc/resolv.conf
+./usr/share/man

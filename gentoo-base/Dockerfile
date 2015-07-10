@@ -1,7 +1,7 @@
 
 # download to this directory: http://ftp.halifax.rwth-aachen.de/archlinux/iso/2015.07.01/archlinux-bootstrap-2015.07.01-x86_64.tar.gz and rename to archlinux-bootstrap.tar.gz
 
-FROM scratch
+FROM bitpick/scratch-tools:latest
 
 MAINTAINER bitpick <bitpick@das-labor.org>
 
@@ -11,8 +11,6 @@ ENV arch amd64
 
 ADD ${mirror}/releases/${arch}/autobuilds/current-stage3-${arch}/stage3-${arch}-${version}.tar.bz2 /stage3-latest.tar.bz2
 ADD ${mirror}/snapshots/portage-latest.tar.bz2 /portage-latest.tar.bz2
-
-ADD tools/ /tools
 
 RUN ["/tools/tar", "-I", "/tools/bzip2", "-xf", "stage3-latest.tar.bz2", "-X", "/tools/exclude"]
 RUN ["/tools/tar", "-I", "/tools/bzip2", "-xf", "portage-latest.tar.bz2", "-C", "/usr"]
