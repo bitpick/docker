@@ -6,7 +6,7 @@ FROM bitpick/scratch-tools:latest
 MAINTAINER bitpick <bitpick@das-labor.org>
 
 ENV mirror http://mirrorservice.org/sites/distfiles.gentoo.org
-ENV version 20150709
+ENV version 20151119
 ENV arch amd64
 
 ADD ${mirror}/releases/${arch}/autobuilds/current-stage3-${arch}/stage3-${arch}-${version}.tar.bz2 /stage3-latest.tar.bz2

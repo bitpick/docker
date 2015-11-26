@@ -6,7 +6,7 @@ FROM bitpick/scratch-tools:latest
 MAINTAINER bitpick <bitpick@das-labor.org>
 
 ENV mirror http://mirrorservice.org/sites/ftp.archlinux.org/iso
-ENV version 2015.07.01
+ENV version 2015.11.01
 ENV arch x86_64
 
 ADD ${mirror}/${version}/archlinux-bootstrap-${version}-${arch}.tar.gz /archlinux-bootstrap.tar.gz
